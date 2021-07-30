@@ -1,0 +1,223 @@
+:root {
+    --primary: #ffffff;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: white;
+}
+
+.header {
+    text-align: center;
+    margin: auto;
+    max-width: 50vh;
+    padding-block: 48px;
+    margin-bottom: 48px;
+    border-bottom: 2px dashed var(--primary);
+    color: var(--primary);
+    font-size: 32px;
+    letter-spacing: 4px;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.team {
+    width: 320px;
+    height: 480px;
+    overflow: hidden;
+    margin: 8px;
+    border: 2px solid var(--primary);
+    border-radius: 16px;
+    position: relative;
+    background-color: #ffffff34;
+}
+
+.team::before {
+    content: '';
+    background-image: var(--img);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    filter: blur(4px);
+}
+
+.team img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 480px;
+    border-radius: 16px;
+    z-index: 3;
+    object-fit: cover;
+    border: none;
+}
+
+.team:hover img {
+    width: 180px;
+    height: 290px;
+    border: 1px solid var(--primary);
+    left: 70px;
+    top: 60px;
+}
+
+.team .info {
+    background-color: blue;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    color: #363636;
+    padding: 16px;
+    border-top: 8px solid var(--primary);
+    border-radius: 50% 50% 0px 0px;
+    padding-top: 80px;
+    text-align: center;
+    transform: scale(2)
+}
+
+
+
+.team .name {
+    color: #ffffff;
+    text-transform: capitalize;
+    
+}
+
+.team:hover .info {
+    transform: scale(1)
+}
+
+.team .social {
+    padding-block: 16px;
+    font-size: 24px;
+}
+
+.team .social a i {
+    display: inline-block;
+    width: 48px;
+    padding: 12px;
+    background-color: #ededed;
+    border-radius: 16px;
+    margin: 4px;
+    cursor: pointer;
+}
+
+.team .social a i:hover {
+    color: var(--primary);
+    background-color: #363636;
+
+}
+
+/* portfolio */
+
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+}
+.section-title h1{
+    display: inline-block;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 5px;
+    position: relative;
+}
+.section-title h1:before{
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 2px;
+    right: 32%;
+    background-color: #febd01;
+    bottom: 0px;
+}
+.text-center{
+    text-align: center!important;
+}
+.text-right{
+    text-align: right!important;
+}
+.portfolio{
+    background-color: white;
+    padding: 100px 7px;
+}
+.portfolio .section-title h1:before{
+    left: 30%;
+}
+.portfolio .filter-buttons{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+.portfolio .filter-buttons ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+}
+.portfolio .filter-buttons ul li{
+    color: #000000;
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-block;
+    margin: 0px 8px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding-bottom: 0px;
+}
+.portfolio .filter-buttons ul li.active{
+    color: #febd01;
+    border-bottom: 2px solid #febd01;
+}
+.portfolio .portfolio-gallery{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.portfolio .portfolio-gallery .item{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    position: relative;
+    padding: 8px;
+   
+}
+.portfolio .portfolio-gallery .item .inner{
+    position: relative;
+}
+.portfolio .portfolio-gallery .item img{
+    width: 100%;
+    display: block;
+    
+}
+  
+@media(max-width:767px){
+  
+    .portfolio .portfolio-gallery .item{
+        flex:0 0 50% ;
+        max-width: 50%;
+        position: relative;
+        padding:8px ;
+    }
+  
+}
+@media(max-width:500px){
+  
+    .portfolio .portfolio-gallery .item{
+        flex:0 0 100% ;
+        max-width: 100%; }
+}
